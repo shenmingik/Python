@@ -79,3 +79,39 @@
 # mo3 = bat_regax.search("The Advantures of Batwowowoman")
 # if mo3 != None:
 #     print(mo3.group())  # Batwowowoman
+
+# 用+匹配一次或多次
+##################################################################
+# import re
+
+# bat_regax = re.compile("Bat(wo)+man")
+
+# mo1 = bat_regax.search("The Advantures of Batman")
+# if mo1 != None:
+#     print(mo1.group()) 
+
+# mo2 = bat_regax.search("The Advantures of Batwoman")
+# if mo2 != None:
+#     print(mo2.group())  # Batwoman
+
+# mo3 = bat_regax.search("The Advantures of Batwowowoman")
+# if mo3 != None:
+#     print(mo3.group())  # Batwowowoman
+
+# 用{}匹配特定次数
+##################################################################
+# import re
+
+# bat_regax = re.compile("Bat(wo){1}man")
+
+# mo1 = bat_regax.search("The Advantures of Batman")
+# if mo1 != None:
+#     print(mo1.group()) 
+
+# mo2 = bat_regax.search("The Advantures of Batwoman")
+# if mo2 != None:
+#     print(mo2.group())  # Batwoman
+
+# mo3 = bat_regax.search("The Advantures of Batwowowoman")
+# if mo3 != None:
+#     print(mo3.group())  
