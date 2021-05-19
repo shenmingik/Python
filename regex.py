@@ -64,3 +64,18 @@
 
 # 用*匹配零次或多次
 ##################################################################
+# import re
+
+# bat_regax = re.compile("Bat(wo)*man")
+
+# mo1 = bat_regax.search("The Advantures of Batman")
+# if mo1 != None:
+#     print(mo1.group())  # Batman
+
+# mo2 = bat_regax.search("The Advantures of Batwoman")
+# if mo2 != None:
+#     print(mo2.group())  # Batwoman
+
+# mo3 = bat_regax.search("The Advantures of Batwowowoman")
+# if mo3 != None:
+#     print(mo3.group())  # Batwowowoman
