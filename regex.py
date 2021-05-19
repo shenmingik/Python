@@ -155,22 +155,31 @@
 
 # 插入字符和美元字符
 ##################################################################
+# import re
+# insert_regax = re.compile("^hello")
+# doller_regax = re.compile("hello$")
+
+# mo1 = insert_regax.search("hello world")
+# if mo1 != None:
+#     print(mo1.group())  # hello
+
+# mo2 = insert_regax.search("python:hello world")
+# if mo2 == None:
+#     print("Don't match rule") # Don't match rule
+
+# mo3 = doller_regax.search("world hello")
+# if mo3 != None:
+#     print(mo3.group())
+
+# mo4 = doller_regax.search("hello world")
+# if mo4 == None:
+#     print("Don't match rule") # Don't match rule
+
+# 通配字符-句点
+##################################################################
 import re
-insert_regax = re.compile("^hello")
-doller_regax = re.compile("hello$")
+at_regax = re.compile(".at")
 
-mo1 = insert_regax.search("hello world")
-if mo1 != None:
-    print(mo1.group())  # hello
-
-mo2 = insert_regax.search("python:hello world")
-if mo2 == None:
-    print("Don't match rule") # Don't match rule
-
-mo3 = doller_regax.search("world hello")
-if mo3 != None:
-    print(mo3.group())
-
-mo4 = doller_regax.search("hello world")
-if mo4 == None:
-    print("Don't match rule") # Don't match rule
+mo = at_regax.findall("dat is not a right,but cat is true")
+for cat in mo:
+    print(cat)  # dat;cat
