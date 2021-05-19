@@ -115,3 +115,31 @@
 # mo3 = bat_regax.search("The Advantures of Batwowowoman")
 # if mo3 != None:
 #     print(mo3.group())  
+
+# 贪心匹配和非贪心匹配
+##################################################################
+# import re
+
+# greedyha_regax = re.compile("(ha){3,5}")
+# mo1 = greedyha_regax.search("hahahahaha")   # 贪心
+# if mo1 != None:
+#     print(mo1.group()) # hahahahaha
+
+# nongreedyha_regax = re.compile("(ha){3,5}?") # 非贪心
+# mo2 = nongreedyha_regax.search("hahahahaha")
+# if mo2 != None:
+#     print(mo2.group())  # hahaha
+
+# findall 方法
+##################################################################
+import re
+phone_regax = re.compile("\d{3}-\d{3}-\d{4}")
+
+mo1 = phone_regax.search("Cell:123-465-7895 Work:987-654-3210")
+if mo1!=None:
+    print(mo1.group()) # 123-465-7895
+
+mo2 = phone_regax.findall("Cell:123-465-7895 Work:987-654-3210")
+if mo2!=None:
+    for phone in mo2:
+        print(phone)    # 123-465-7895; 987-654-3210
