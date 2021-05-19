@@ -132,14 +132,23 @@
 
 # findall 方法
 ##################################################################
-import re
-phone_regax = re.compile("\d{3}-\d{3}-\d{4}")
+# import re
+# phone_regax = re.compile("\d{3}-\d{3}-\d{4}")
 
-mo1 = phone_regax.search("Cell:123-465-7895 Work:987-654-3210")
-if mo1!=None:
-    print(mo1.group()) # 123-465-7895
+# mo1 = phone_regax.search("Cell:123-465-7895 Work:987-654-3210")
+# if mo1!=None:
+#     print(mo1.group()) # 123-465-7895
 
-mo2 = phone_regax.findall("Cell:123-465-7895 Work:987-654-3210")
-if mo2!=None:
-    for phone in mo2:
-        print(phone)    # 123-465-7895; 987-654-3210
+# mo2 = phone_regax.findall("Cell:123-465-7895 Work:987-654-3210")
+# if mo2!=None:
+#     for phone in mo2:
+#         print(phone)    # 123-465-7895; 987-654-3210
+
+# 自定义字符分类
+##################################################################
+# import re
+# vowel_regax = re.compile("[a-d]")
+
+# mo = vowel_regax.search("ghjwaio")
+# if mo != None:
+#     print(mo.group())   # a
