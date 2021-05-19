@@ -175,11 +175,20 @@
 # if mo4 == None:
 #     print("Don't match rule") # Don't match rule
 
-# 通配字符-句点
+# 通配字符-句点1
+##################################################################
+# import re
+# at_regax = re.compile(".at")
+
+# mo = at_regax.findall("dat is not a right,but cat is true")
+# for cat in mo:
+#     print(cat)  # dat;cat
+
+# 通配字符-句点2
 ##################################################################
 import re
-at_regax = re.compile(".at")
+at_regax = re.compile(".at",re.DOTALL)
 
-mo = at_regax.findall("dat is not a right,but cat is true")
+mo = at_regax.findall("\nat is not a right,but cat is true")
 for cat in mo:
-    print(cat)  # dat;cat
+    print(cat)  # \ndat 
