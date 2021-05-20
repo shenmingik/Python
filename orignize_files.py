@@ -40,7 +40,7 @@
 #     for file_name in file_names:
 #         print("\t"+folder_name+": "+file_name)
 
-# 压缩文件
+# 创建压缩文件
 ##################################################################
 # import zipfile
 # import os
@@ -49,3 +49,18 @@
 # new_zip = zipfile.ZipFile("newZip","w")
 # new_zip.write("test.txt",compress_type=zipfile.ZIP_DEFLATED)
 # new_zip.write("test.cpp",compress_type=zipfile.ZIP_DEFLATED)
+
+# 读取压缩文件
+##################################################################
+import zipfile
+import os
+
+current_path = os.getcwd()
+new_zip = zipfile.ZipFile("newZip","r")
+files = new_zip.namelist()
+
+for file in files:
+    info = new_zip.getinfo(file)
+    print("filename: "+file)
+    print("\tsize: "+str(info.file_size))
+    print("\tcompress_size: "+str(info.compress_size))
