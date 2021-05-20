@@ -29,3 +29,11 @@
 
 # print("current path is: "+os.path.abspath("."))
 # print("current path: "+os.path.abspath(".")+" to root dir \"home\" ways is "+os.path.relpath(".","/home"))
+
+# 获取文件名
+##################################################################
+import os
+
+current_name = os.getcwd()+"/Python/file_manage.py"
+print("dir is "+os.path.dirname(current_name))
+print("file is "+os.path.basename(current_name))
