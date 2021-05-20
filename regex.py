@@ -191,4 +191,4 @@ at_regax = re.compile(".at",re.DOTALL)
 
 mo = at_regax.findall("\nat is not a right,but cat is true")
 for cat in mo:
-    print(cat)  # \ndat 
+    print(cat)  # \nat;cat 
