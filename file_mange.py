@@ -65,10 +65,22 @@
 
 # 打开文件并读取内容(按行读取)
 ##################################################################
+# import os
+
+# current_path = os.getcwd()
+# file = open(current_path+"/Python/README.md")
+# lines = file.readlines()
+# for line in lines:
+#     print(line)
+
+# 写入文件
+##################################################################
 import os
 
 current_path = os.getcwd()
-file = open(current_path+"/Python/README.md")
-lines = file.readlines()
-for line in lines:
-    print(line)
+file = open(current_path+"/test.txt","a")
+file.write("hello ")
+file.write("world!\n")
+file.write("\t\t\t\tby python")
+
+file.close()
