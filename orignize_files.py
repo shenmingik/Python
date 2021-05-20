@@ -52,15 +52,26 @@
 
 # 读取压缩文件
 ##################################################################
+# import zipfile
+# import os
+
+# current_path = os.getcwd()
+# new_zip = zipfile.ZipFile("newZip","r")
+# files = new_zip.namelist()
+
+# for file in files:
+#     info = new_zip.getinfo(file)
+#     print("filename: "+file)
+#     print("\tsize: "+str(info.file_size))
+#     print("\tcompress_size: "+str(info.compress_size))
+
+# 解压缩压缩文件
+##################################################################
 import zipfile
 import os
 
 current_path = os.getcwd()
-new_zip = zipfile.ZipFile("newZip","r")
-files = new_zip.namelist()
-
-for file in files:
-    info = new_zip.getinfo(file)
-    print("filename: "+file)
-    print("\tsize: "+str(info.file_size))
-    print("\tcompress_size: "+str(info.compress_size))
+example_zip = zipfile.ZipFile("newZip","r")
+# 解压
+example_zip.extractall()
+example_zip.close()
