@@ -28,14 +28,24 @@
 
 # 删除文件和文件夹
 ##################################################################
-import shutil
-import os
+# import shutil
+# import os
 
-current_path = os.getcwd()
-for folder_name,sub_folders,file_names in os.walk(current_path):
-    print(folder_name+":")
-    # 加载当前文件路径下的所有子文件
-    for sub_folder in sub_folders:
-        print("\t"+folder_name+": "+sub_folder+"(dir)")
-    for file_name in file_names:
-        print("\t"+folder_name+": "+file_name)
+# current_path = os.getcwd()
+# for folder_name,sub_folders,file_names in os.walk(current_path):
+#     print(folder_name+":")
+#     # 加载当前文件路径下的所有子文件
+#     for sub_folder in sub_folders:
+#         print("\t"+folder_name+": "+sub_folder+"(dir)")
+#     for file_name in file_names:
+#         print("\t"+folder_name+": "+file_name)
+
+# 压缩文件
+##################################################################
+# import zipfile
+# import os
+
+# current_path = os.getcwd()
+# new_zip = zipfile.ZipFile("newZip","w")
+# new_zip.write("test.txt",compress_type=zipfile.ZIP_DEFLATED)
+# new_zip.write("test.cpp",compress_type=zipfile.ZIP_DEFLATED)
