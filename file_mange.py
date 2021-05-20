@@ -53,12 +53,22 @@
 #     else:
 #         print("(dir) "+file+" size: "+str(os.path.getsize(current_name+"/"+file)))
 
-# 打开文件并读取内容
+# 打开文件并读取内容(单个读取)
+##################################################################
+# import os
+
+# current_path = os.getcwd()
+
+# file = open(current_path+"/Python/README.md","r")
+# file_content = file.read()
+# print(file_content)
+
+# 打开文件并读取内容(按行读取)
 ##################################################################
 import os
 
 current_path = os.getcwd()
-
-file = open(current_path+"/Python/README.md","r")
-file_content = file.read()
-print(file_content)
+file = open(current_path+"/Python/README.md")
+lines = file.readlines()
+for line in lines:
+    print(line)
