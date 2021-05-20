@@ -75,12 +75,12 @@
 
 # 写入文件
 ##################################################################
-import os
+# import os
 
-current_path = os.getcwd()
-file = open(current_path+"/test.txt","a")
-file.write("hello ")
-file.write("world!\n")
-file.write("\t\t\t\tby python")
+# current_path = os.getcwd()
+# file = open(current_path+"/test.txt","a")
+# file.write("hello ")
+# file.write("world!\n")
+# file.write("\t\t\t\tby python")
 
-file.close()
+# file.close()
