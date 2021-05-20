@@ -39,15 +39,26 @@
 # print("file is "+os.path.basename(current_name))
 
 # 获取文件大小和文件夹内容
+##################################################################
+# import os
+
+# current_name = os.getcwd()
+# print(current_name+" size: "+str(os.path.getsize(current_name)))
+# # 获取当前路径下所有文件(夹)的大小
+# for file in os.listdir(current_name):
+#     # 非文件夹
+#     if os.path.isdir(current_name+"/"+file) == False:
+#         print( file +" size: ",str(os.path.getsize(current_name+"/"+file)))
+#     # 文件夹
+#     else:
+#         print("(dir) "+file+" size: "+str(os.path.getsize(current_name+"/"+file)))
+
+# 打开文件并读取内容
+##################################################################
 import os
 
-current_name = os.getcwd()
-print(current_name+" size: "+str(os.path.getsize(current_name)))
-# 获取当前路径下所有文件(夹)的大小
-for file in os.listdir(current_name):
-    # 非文件夹
-    if os.path.isdir(current_name+"/"+file) == False:
-        print( file +" size: ",str(os.path.getsize(current_name+"/"+file)))
-    # 文件夹
-    else:
-        print("(dir) "+file+" size: "+str(os.path.getsize(current_name+"/"+file)))
+current_path = os.getcwd()
+
+file = open(current_path+"/Python/README.md","r")
+file_content = file.read()
+print(file_content)
