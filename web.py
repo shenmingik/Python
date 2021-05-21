@@ -43,3 +43,36 @@
 #     down_file.write(chunk)
 
 # down_file.close()
+
+# 解析HTML
+##################################################################
+import requests
+import bs4
+import sys
+import pyperclip
+
+if len(sys.argv) > 1:
+    i = 2
+    content = "".join(sys.argv[1])
+    while i < len(sys.argv):
+        content = content + " "+"".join(sys.argv[i])
+        i = i+1
+# 从剪切板获取参数
+else:
+    content = pyperclip.paste()
+url = "https://dict.youdao.com/w/eng/"+content+"/#keyfrom=dict2.index"
+res = requests.get(url)
+res.raise_for_status()
+
+soup = bs4.BeautifulSoup(res.text,features="html.parser")
+
+elems = soup.select("div.trans-container > ul")
+
+# 根据有道的编写规则，elems[0]里面存储的就是单词释义的相关信息
+words = list(elems[0])
+for word in words:
+    word = str(word)
+    if word.find("<li>") != -1:
+        begin = word.find("<li>")
+        end = word.find("</li>")
+        print(word[begin+4:end])
